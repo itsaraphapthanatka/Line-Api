@@ -319,7 +319,23 @@
         "messages" =>[
           [
             "type" => "text",
-            "text" => "แจ้งเตือนการจองนัดหมาย \nลูกค้า : ". $request_array['name'] ."\nอีเมล์ : ".$request_array['email']."\nผลิตภัณฑ์ : ".$request_array['packagename']."\nวันนัด : ".$request_array['date']."\nเวลานัด : ".$request_array['time']
+            "text" => "แจ้งเตือนการจองนัดหมาย \nลูกค้า : ". $request_array['name'] ."\nอีเมล์ : ".$request_array['email']."\nเบอร์โทร : ". $request_array['mobile'] ."\nผลิตภัณฑ์ : ".$request_array['packagename']."\nวันนัด : ".$request_array['date']."\nเวลานัด : ".$request_array['time']
+          ],
+          [
+            "type" => "text",
+            "text" => "คุณยืนยันการจองนัดหมายนี้  ใช่หรือไม่?",
+            "quickReply"=> [
+              "items"=> [
+                [
+                  "type"=> "action",
+                  "action"=> [
+                    "type"=> "message",
+                    "label"=> "Confirm",
+                    "text" => "Confirm"
+                  ]
+                ]
+              ]
+            ]
           ]
         ]
       ];

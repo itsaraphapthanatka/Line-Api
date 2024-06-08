@@ -204,7 +204,7 @@ if (!isset($_SESSION['profile'])) {
                                         </label>
                                         <!--end::Label-->
                                         <!--begin::Input-->
-                                        <input type="email" class="email form-control form-control-solid" id="email" name="email" value="" />
+                                        <input type="email" class="email form-control form-control-solid" id="email" name="email" value="<?= $_SESSION['profile']->email; ?>" />
                                         <!-- <span class="fs-7 text-muted mb-15">เพื่อให้ระบบจัดส่งสลิปค่ามัดจำ</span> -->
                                         <!--end::Input-->
                                     </div>

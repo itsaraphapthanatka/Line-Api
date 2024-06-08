@@ -148,7 +148,7 @@ if (!isset($_SESSION['profile'])) {
                                         </label>
                                         <!--end::Label-->
                                         <!--begin::Input-->
-                                        <input type="text" class="fullname form-control form-control-solid" name="fullname" value="" />
+                                        <input type="text" readonly class="fullname form-control form-control-solid" name="fullname" value="<?= $_SESSION['profile']->name; ?>" />
                                         <input type="hidden" class="name form-control form-control-solid" id="name" name="name" value="<?= $_SESSION['profile']->name; ?>" />
                                         <!--end::Input-->
                                     </div>
@@ -186,14 +186,14 @@ if (!isset($_SESSION['profile'])) {
                                         </label>
                                         <!--end::Label-->
                                         <!--begin::Input-->
-                                        <input type="text" class="location form-control form-control-solid" name="location" value="ณ.สถานที่ Private ติด BTS อารีย์" />
+                                        <input type="text" class="location form-control form-control-solid" name="location" value="" />
                                         
                                         <!--end::Input-->
                                     </div>
                                     <!--end::Input group-->
                                 </div>
                             </div>
-                            <div class="row" hidden>
+                            <div class="row">
                                 <div class="col">
                                     <!--begin::Input group-->
                                     <div class="fv-row mb-7">
@@ -204,8 +204,7 @@ if (!isset($_SESSION['profile'])) {
                                         </label>
                                         <!--end::Label-->
                                         <!--begin::Input-->
-                                        <input type="email" class="email form-control form-control-solid" id="email" name="email" value="TheTherapistReceipt@gmail.com" />
-                                        <span class="fs-7 text-muted mb-15">เพื่อให้ระบบจัดส่งสลิปค่ามัดจำ</span>
+                                        <input type="email" class="email form-control form-control-solid" id="email" name="email" value="<?= $_SESSION['profile']->email; ?>" />
                                         <!--end::Input-->
                                     </div>
                                     <!--end::Input group-->

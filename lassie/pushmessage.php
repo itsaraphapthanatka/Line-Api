@@ -114,211 +114,227 @@
    }elseif ($message == "flex") {
 
   
-  $arrayPostData = [
-    "to" => $request_array['id'],
-    "messages" => [
-      [
-        "type" => "flex",
-        "altText" => "Booking",
-        "contents" => [
-          "type" => "bubble",
-          // "header" => [
-          //   "type" => "box",
-          //   "layout" => "vertical",
-          //   "contents" => [
-          //     [
-          //       "type"=> "image",
-          //       "url"=> "https://sv1.picz.in.th/images/2023/02/08/L5se4z.jpg",
-          //       "size"=> "full",
-          //       "aspectMode"=> "cover",
-          //       "margin"=> "none",
-          //       "align"=> "center",
-          //       "backgroundColor"=> "#044383",
-          //       "offsetTop"=> "none",
-          //       "offsetBottom"=> "none",
-          //       "offsetStart"=> "none",
-          //       "aspectRatio"=> "31:15",
-          //       "position"=> "absolute",
-          //       "offsetEnd"=> "none",
-          //       "gravity"=> "center"
-          //     ]
-          //   ],
-          //   "spacing"=> "none",
-          //   "margin"=> "none",
-          //   "height"=> "100px",
-          //   "justifyContent"=> "flex-end"
-          // ],
-          "body" => [
-            "type" => "box",
-            "layout" => "vertical",
-            "spacing" => "md",
+      $arrayPostData = [
+        "to" => $request_array['id'],
+        "messages" => [
+          [
+            "type" => "flex",
+            "altText" => "Booking",
             "contents" => [
-              [
-                "type" => "text",
-                "text" => "นัดหมาย",
-                "wrap" => true,
-                "weight" => "bold",
-                "size" => "lg",
-                "margin" => "none"
-              ],
-              [
+              "type" => "bubble",
+              // "header" => [
+              //   "type" => "box",
+              //   "layout" => "vertical",
+              //   "contents" => [
+              //     [
+              //       "type"=> "image",
+              //       "url"=> "https://sv1.picz.in.th/images/2023/02/08/L5se4z.jpg",
+              //       "size"=> "full",
+              //       "aspectMode"=> "cover",
+              //       "margin"=> "none",
+              //       "align"=> "center",
+              //       "backgroundColor"=> "#044383",
+              //       "offsetTop"=> "none",
+              //       "offsetBottom"=> "none",
+              //       "offsetStart"=> "none",
+              //       "aspectRatio"=> "31:15",
+              //       "position"=> "absolute",
+              //       "offsetEnd"=> "none",
+              //       "gravity"=> "center"
+              //     ]
+              //   ],
+              //   "spacing"=> "none",
+              //   "margin"=> "none",
+              //   "height"=> "100px",
+              //   "justifyContent"=> "flex-end"
+              // ],
+              "body" => [
                 "type" => "box",
                 "layout" => "vertical",
-                "margin" => "xs",
-                "spacing" => "xs",
+                "spacing" => "md",
                 "contents" => [
                   [
-                    "type" => "box",
-                    "layout" => "baseline",
-                    "spacing" => "sm",
-                    "contents" => [
-                      [
-                        "type" => "text",
-                        "text" => "ลูกค้า :",
-                        "size" => "sm",
-                        "flex" => 2,
-                        "margin" => "none"
-                      ],
-                      [
-                        "type" => "text",
-                        "text" => $request_array['name'],
-                        "wrap" => true,
-                        "size" => "md",
-                        "color" => "#000000",
-                        "flex" => 8,
-                        "weight" => "regular",
-                        "decoration" => "none",
-                        "align" => "start"
-                      ]
-                    ],
+                    "type" => "text",
+                    "text" => "นัดหมาย",
+                    "wrap" => true,
+                    "weight" => "bold",
+                    "size" => "lg",
                     "margin" => "none"
                   ],
                   [
                     "type" => "box",
-                    "layout" => "baseline",
-                    "spacing" => "sm",
+                    "layout" => "vertical",
+                    "margin" => "xs",
+                    "spacing" => "xs",
                     "contents" => [
                       [
-                        "type" => "text",
-                        "text" => "ผลิดภัณฑ์ :",
-                        "size" => "sm",
-                        "flex" => 2,
+                        "type" => "box",
+                        "layout" => "baseline",
+                        "spacing" => "sm",
+                        "contents" => [
+                          [
+                            "type" => "text",
+                            "text" => "ลูกค้า :",
+                            "size" => "sm",
+                            "flex" => 2,
+                            "margin" => "none"
+                          ],
+                          [
+                            "type" => "text",
+                            "text" => $request_array['name'],
+                            "wrap" => true,
+                            "size" => "md",
+                            "color" => "#000000",
+                            "flex" => 8,
+                            "weight" => "regular",
+                            "decoration" => "none",
+                            "align" => "start"
+                          ]
+                        ],
                         "margin" => "none"
                       ],
                       [
-                        "type" => "text",
-                        "text" => $request_array['packagename'],
-                        "wrap" => true,
-                        "size" => "md",
-                        "color" => "#000000",
-                        "flex" => 8,
-                        "weight" => "regular",
-                        "decoration" => "none",
-                        "align" => "start"
-                      ]
+                        "type" => "box",
+                        "layout" => "baseline",
+                        "spacing" => "sm",
+                        "contents" => [
+                          [
+                            "type" => "text",
+                            "text" => "ผลิดภัณฑ์ :",
+                            "size" => "sm",
+                            "flex" => 2,
+                            "margin" => "none"
+                          ],
+                          [
+                            "type" => "text",
+                            "text" => $request_array['packagename'],
+                            "wrap" => true,
+                            "size" => "md",
+                            "color" => "#000000",
+                            "flex" => 8,
+                            "weight" => "regular",
+                            "decoration" => "none",
+                            "align" => "start"
+                          ]
+                        ],
+                        "margin" => "none"
+                      ],
+                      [
+                        "type" => "box",
+                        "layout" => "baseline",
+                        "spacing" => "sm",
+                        "contents" => [
+                          [
+                            "type" => "text",
+                            "text" => "วันที่นัด :",
+                            "size" => "sm",
+                            "flex" => 2,
+                            "margin" => "none"
+                          ],
+                          [
+                            "type" => "text",
+                            "text" => $request_array['date'],
+                            "wrap" => true,
+                            "size" => "md",
+                            "color" => "#044383",
+                            "flex" => 8,
+                            "weight" => "regular",
+                            "decoration" => "none"
+                          ]
+                        ]
+                      ],
+                      [
+                        "type" => "box",
+                        "layout" => "baseline",
+                        "spacing" => "sm",
+                        "contents" => [
+                          [
+                            "type" => "text",
+                            "text" => "เาลานัด :",
+                            "size" => "sm",
+                            "flex" => 2,
+                            "margin" => "none"
+                          ],
+                          [
+                            "type" => "text",
+                            "text" =>  $request_array['time'],
+                            "wrap" => true,
+                            "size" => "md",
+                            "color" => "#044383",
+                            "flex" => 8,
+                            "weight" => "regular"
+                          ]
+                        ]
+                      ],
                     ],
-                    "margin" => "none"
-                  ],
-                  [
-                    "type" => "box",
-                    "layout" => "baseline",
-                    "spacing" => "sm",
-                    "contents" => [
-                      [
-                        "type" => "text",
-                        "text" => "วันที่นัด :",
-                        "size" => "sm",
-                        "flex" => 2,
-                        "margin" => "none"
-                      ],
-                      [
-                        "type" => "text",
-                        "text" => $request_array['date'],
-                        "wrap" => true,
-                        "size" => "md",
-                        "color" => "#044383",
-                        "flex" => 8,
-                        "weight" => "regular",
-                        "decoration" => "none"
-                      ]
-                    ]
-                  ],
-                  [
-                    "type" => "box",
-                    "layout" => "baseline",
-                    "spacing" => "sm",
-                    "contents" => [
-                      [
-                        "type" => "text",
-                        "text" => "เาลานัด :",
-                        "size" => "sm",
-                        "flex" => 2,
-                        "margin" => "none"
-                      ],
-                      [
-                        "type" => "text",
-                        "text" =>  $request_array['time'],
-                        "wrap" => true,
-                        "size" => "md",
-                        "color" => "#044383",
-                        "flex" => 8,
-                        "weight" => "regular"
-                      ]
-                    ]
-                  ],
+                    "borderWidth" => "none",
+                    "borderColor" => "#D5EAFF"
+                  ]
                 ],
-                "borderWidth" => "none",
-                "borderColor" => "#D5EAFF"
+              ],
+              // "footer" => [
+              //   "type" => "box",
+              //   "layout" => "vertical",
+              //   "contents" => [
+              //     [
+              //       "type" => "image",
+              //       "url" => "https://sv1.picz.in.th/images/2023/02/08/L52v2N.jpg",
+              //       "size" => "full",
+              //       "aspectRatio" => "18:4",
+              //       "aspectMode" => "cover",
+              //       "margin" => "none",
+              //       "offsetTop" => "none",
+              //       "offsetBottom" => "none",
+              //       "offsetStart" => "none",
+              //       "position" => "absolute",
+              //       "align" => "center",
+              //       "gravity" => "center",
+              //       "offsetEnd" => "none"
+              //     ]
+              //   ],
+              //   "spacing" => "none",
+              //   "margin" => "none",
+              //   "offsetEnd" => "none",
+              //   "offsetBottom" => "none",
+              //   "height" => "65px",
+              //   "borderColor" => "#576975"
+              // ],
+              "styles" => [
+                "footer" => [
+                  "backgroundColor" => "#576975",
+                  "separator" => true
+                ]
               ]
-            ],
-          ],
-          // "footer" => [
-          //   "type" => "box",
-          //   "layout" => "vertical",
-          //   "contents" => [
-          //     [
-          //       "type" => "image",
-          //       "url" => "https://sv1.picz.in.th/images/2023/02/08/L52v2N.jpg",
-          //       "size" => "full",
-          //       "aspectRatio" => "18:4",
-          //       "aspectMode" => "cover",
-          //       "margin" => "none",
-          //       "offsetTop" => "none",
-          //       "offsetBottom" => "none",
-          //       "offsetStart" => "none",
-          //       "position" => "absolute",
-          //       "align" => "center",
-          //       "gravity" => "center",
-          //       "offsetEnd" => "none"
-          //     ]
-          //   ],
-          //   "spacing" => "none",
-          //   "margin" => "none",
-          //   "offsetEnd" => "none",
-          //   "offsetBottom" => "none",
-          //   "height" => "65px",
-          //   "borderColor" => "#576975"
-          // ],
-          "styles" => [
-            "footer" => [
-              "backgroundColor" => "#576975",
-              "separator" => true
             ]
           ]
         ]
-      ]
-    ]
-  ];
+      ];
 
-  pushMsg($arrayHeader,$arrayPostData);
+      pushMsg($arrayHeader,$arrayPostData);
    }elseif ($message == "text"){
      $arrayPostData = [
        "to" => $request_array['id'],
        "messages" => [
          [
            "type" => "text",
-           "text" => "แจ้งเตือนการจองนัดหมาย \nลูกค้า : ". $request_array['name'] ."\nผลิตภัณฑ์ : ".$request_array['packagename']."\nวันนัด : ".$request_array['date']."\nเวลานัด : ".$request_array['time']
-         ]
+           "text" => "แจ้งเตือนการจองนัดหมาย \nลูกค้า : ". $request_array['name'] ."\nอีเมล์ : ".$request_array['email']."\nเบอร์โทร : ". $request_array['mobile'] ."\nผลิตภัณฑ์ : ".$request_array['packagename']."\nวันนัด : ".$request_array['date']."\nเวลานัด : ".$request_array['time']
+         ],
+         [
+          "type" => "text",
+          "text" => "คุณยืนยันการจองนัดหมายนี้  ใช่หรือไม่?",
+          "quickReply"=> [
+            "items"=> [
+              [
+                "type"=> "action",
+                "action"=> [
+                  "type"=> "message",
+                  "label"=> "Confirm",
+                  "text" => "Confirm"
+                ]
+              ]
+            ]
+          ]
+        ]
        ]
      ];
      pushMsg($arrayHeader,$arrayPostData);

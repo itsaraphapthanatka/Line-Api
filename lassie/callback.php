@@ -16,11 +16,17 @@ if ($token->id_token) {
     $profile = $line->profileFormIdToken($token);
     $customer = "LASSIE";
     $message = $profile->name." UserID: ".$profile->sub." Email: ".$profile->email." Picture: ".$profile->picture." Customer Login:".$customer;
-    sendLineNotify($message);
+    $url = $profile->picture;
+    $imageFile = new CURLFILE($url);
+    $data = array(
+      'message' => $message,
+      'imageFile' => $imageFile
+    );
+    sendLineNotify($data);
     $_SESSION['profile'] = $profile;
     header('location: index.php');
 }
-function sendLineNotify($message){
+function sendLineNotify($data){
     
      // $token = "bQPVcUcwtNxr3gZJYZZtYuSPmBDFfrOkPSjRPWgeLcE"; // ใส่ Token ที่สร้างไว้ BIG
      $token = "FruM0XKAjGpdBDGyc4c0bDT9VOoRYIdImoW6KCvflQc"; // ใส่ Token ที่สร้างไว้ TOP
@@ -31,8 +37,8 @@ function sendLineNotify($message){
      curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
      curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
      curl_setopt($ch, CURLOPT_POST, 1);
-     curl_setopt($ch, CURLOPT_POSTFIELDS, "message=" . $message);
-     $headers = array('Content-type: application/x-www-form-urlencoded', 'Authorization: Bearer ' . $token . '',);
+     curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+     $headers = array('Content-type: multipart/form-data', 'Authorization: Bearer ' . $token . '',);
      curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
      curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
      $result = curl_exec($ch);
