@@ -319,7 +319,7 @@
         "messages" =>[
           [
             "type" => "text",
-            "text" => "แจ้งเตือนการจองนัดหมาย \nลูกค้า : ". $request_array['name'] ."\nผลิตภัณฑ์ : ".$request_array['packagename']."\nวันนัด : ".$request_array['date']."\nเวลานัด : ".$request_array['time']
+            "text" => "แจ้งเตือนการจองนัดหมาย \nลูกค้า : ". $request_array['name'] ."\nอีเมล์ : ".$request_array['email']."\nผลิตภัณฑ์ : ".$request_array['packagename']."\nวันนัด : ".$request_array['date']."\nเวลานัด : ".$request_array['time']
           ]
         ]
       ];

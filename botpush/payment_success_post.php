@@ -37,8 +37,8 @@
 	  // die();
 	  addappointment($name,$email,$start,$starttime,$endtime,$fullname,$mobile,$userid,$location,$shotdays,$package);
 	  addCustomer($name,$email,$start,$starttime,$endtime,$fullname,$mobile,$userid,$location);
-	  sendLineMessage($userid,$name,$date,$time,$location,$mobile,$fullname,$packagename); 
-	  sendLineMessage('Uab21834db3808efbbe30c30ea954c231',$name,$date,$time,$location,$mobile,$fullname,$packagename); 
+	  sendLineMessage($userid,$name,$date,$time,$location,$mobile,$fullname,$packagename,$email); 
+	  sendLineMessage('Uab21834db3808efbbe30c30ea954c231',$name,$date,$time,$location,$mobile,$fullname,$packagename,$email); 
 	  // sendLineNotify($message,$fullname,$name,$userid,$date,$time,$mobile);
 	  sendLineNotify_top($messageTOP,$fullname,$name,$userid,$date,$time,$mobile);
 	 header('location: pageload.php');
@@ -66,7 +66,8 @@
 		  "time": "'.$time.'",
 		  "price": "'.$location.'",
 		  "mobile": "'.$mobile.'",
-		  "packagename": "'.$packagename.'"
+		  "packagename": "'.$packagename.'",
+		  "email": "'.$email.'"
 	  }',
 		CURLOPT_HTTPHEADER => array(
 		  'Authorization: fmgZS5qsjPSo77mc0WtKxi0E7vwp4T136BpPXugDxVUvku2LocT3TP6djzPQ2sCa1FEFHpRiuukRsHwIeTRYlMehPS0qXPXPhIOt+SzfExqP93qAJKl2Mj4fJF7TFYalFjEdElvMwND7Zr9IhYQ49wdB04t89/1O/w1cDnyilFU=',
