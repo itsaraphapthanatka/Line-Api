@@ -323,15 +323,16 @@
           ],
           [
             "type" => "text",
-            "text" => "คุณยืนยันการจองนัดหมายนี้  ใช่หรือไม่?",
+            "text" => "กรุณากดยืนยันการจอง",
             "quickReply"=> [
               "items"=> [
                 [
                   "type"=> "action",
+                  "imageUrl" => "https://w7.pngwing.com/pngs/537/407/png-transparent-verified-check-mark-confirmation-checkbox-passed-icon.png",
                   "action"=> [
                     "type"=> "message",
-                    "label"=> "Confirm",
-                    "text" => "Confirm"
+                    "label"=> "ยืนยัน",
+                    "text" => "ยืนยัน"
                   ]
                 ]
               ]
